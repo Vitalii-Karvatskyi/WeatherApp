@@ -64,7 +64,7 @@ async function  getWeather() {
     city.innerHTML = `${data.name}`
     DataTime.innerHTML =convertTime(data.dt , data.timezone)
     forecast.innerHTML = `<p>${data.weather[0].main}</p>`
-    temperature.innerHTML =`${data.main.temp}`
+    temperature.innerHTML =`${data.main.temp.toFixed()}`
     icon.innerHTML = `<img src="http://openweathermap.org/img/wn/${data.weather[0].icon}@4x.png" />`
     weatherMinMax.innerHTML = `
         <p>Min: ${data.main.temp_min.toFixed()}&#176</p>
